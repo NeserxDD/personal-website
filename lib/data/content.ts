@@ -48,6 +48,29 @@ export const siteConfig: SiteConfig = {
         live: 'https://example.com',
       },
     },
+    {
+      id: '4',
+      title: 'System Monitor',
+      description:
+        'A real-time system monitoring dashboard with alerting and log analysis.',
+      techStack: ['Next.js', 'Socket.IO', 'Tailwind CSS'],
+      thumbnail: 'https://placehold.co/400x225?text=Monitor',
+      links: {
+        github: 'https://github.com/NeserxDD',
+        live: 'https://example.com',
+      },
+    },
+    {
+      id: '5',
+      title: 'Portfolio Website',
+      description:
+        'A minimal portfolio built with Next.js and the bryl-minimal design system.',
+      techStack: ['Next.js', 'TypeScript', 'Tailwind CSS'],
+      thumbnail: 'https://placehold.co/400x225?text=Portfolio',
+      links: {
+        github: 'https://github.com/NeserxDD',
+      },
+    },
   ],
   skills: {
     technical: [
@@ -142,23 +165,25 @@ export const siteConfig: SiteConfig = {
       dateEarned: '2025-01-10',
       badgeImage: 'https://placehold.co/80x80?text=AWS',
     },
+    {
+      id: '3',
+      name: 'Google IT Support',
+      issuer: 'Google',
+      dateEarned: '2024-11-20',
+      badgeImage: 'https://placehold.co/80x80?text=GCP',
+    },
+    {
+      id: '4',
+      name: 'Linux+',
+      issuer: 'CompTIA',
+      dateEarned: '2024-08-15',
+      badgeImage: 'https://placehold.co/80x80?text=Linux',
+    },
   ],
   outsideTech:
     "When I'm not debugging code or configuring networks, I enjoy hiking, photography, and playing indie video games.",
   contact: {
-    email: 'your.email@example.com',
-    socialLinks: [
-      {
-        platform: 'github',
-        label: 'github.com/neserxdd',
-        url: 'https://github.com/NeserxDD',
-      },
-      {
-        platform: 'linkedin',
-        label: 'linkedin.com/in/yourname',
-        url: 'https://linkedin.com/in/yourname',
-      },
-    ],
+    email: 'rblenon18@gmail.com',
     location: 'San Francisco, CA',
   },
 };

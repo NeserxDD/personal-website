@@ -72,7 +72,6 @@ export interface SiteConfig {
   outsideTech: string;
   contact: {
     email: string;
-    socialLinks: SocialLink[];
     location: string;
   };
 }

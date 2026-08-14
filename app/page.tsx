@@ -1,6 +1,5 @@
 import { Header } from './components/shared/header';
 import { Footer } from './components/shared/footer';
-import { SidebarNav } from './components/layout/sidebar-nav';
 import { Hero } from './components/sections/hero';
 import { About } from './components/sections/about';
 import { Projects } from './components/sections/projects';
@@ -15,10 +14,9 @@ export default function Home() {
   return (
     <>
       <Header />
-      <SidebarNav />
-      <main className="lg:ml-sidebar min-h-screen">
+      <main className="min-h-screen">
         <Hero />
-        <div className="mx-auto max-w-3xl px-4 sm:px-6 py-section">
+        <div className="mx-auto max-w-content-wide px-4 sm:px-6 py-section">
           <About />
           <Projects />
           <Skills />

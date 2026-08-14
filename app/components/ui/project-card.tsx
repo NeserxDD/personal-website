@@ -3,23 +3,34 @@ import { ArrowUpRight } from './icons';
 
 interface ProjectCardProps {
   project: Project;
+  highlight?: boolean;
 }
 
-export function ProjectCard({ project }: ProjectCardProps) {
+export function ProjectCard({ project, highlight = false }: ProjectCardProps) {
   return (
-    <div className="group flex flex-col gap-3">
+    <div
+      className={`group flex flex-col gap-4 ${
+        highlight ? 'max-w-xl mx-auto' : ''
+      }`}
+    >
       <div className="relative overflow-hidden rounded-lg">
         <img
           src={project.thumbnail}
           alt={project.title}
-          className="w-full object-cover transition-transform duration-500 group-hover:scale-105 aspect-video"
+          className={`object-cover transition-transform duration-500 group-hover:scale-105 ${
+            highlight ? 'w-full h-48 sm:h-56' : 'aspect-video w-full'
+          }`}
         />
       </div>
       <div className="flex flex-col">
         <h3 className="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-gray-600 transition-colors">
           {project.title}
         </h3>
-        <p className="mt-1 text-sm text-gray-500 dark:text-gray-400 leading-relaxed line-clamp-2">
+        <p
+          className={`text-sm text-gray-500 dark:text-gray-400 leading-relaxed ${
+            highlight ? 'line-clamp-2' : 'line-clamp-2'
+          }`}
+        >
           {project.description}
         </p>
         <div className="mt-2 flex flex-wrap gap-1.5">

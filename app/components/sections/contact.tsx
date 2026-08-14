@@ -1,80 +1,70 @@
-'use client';
-
-import { useState } from 'react';
 import { siteConfig } from '../../../lib/data/content';
-import { ArrowUpRight, Check, Copy } from '../ui/icons';
+import { Mail, Calendar, ChevronRight } from '../ui/icons';
 
 export function Contact() {
-  const [copied, setCopied] = useState(false);
   const { contact } = siteConfig;
 
-  const copyEmail = () => {
-    navigator.clipboard.writeText(contact.email);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
-
   return (
-    <section id="contact" className="mt-12 sm:mt-14">
-      <div className="mb-6 flex items-center gap-4">
-        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/30">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-            <path d="M22 6l-10 7L2 6" />
-          </svg>
-        </div>
-        <span className="font-display text-xs uppercase tracking-wider text-gray-400">
-          08 — contact
-        </span>
-      </div>
-
-      <h2 className="text-2xl sm:text-3xl font-light tracking-tight text-gray-900 dark:text-white mt-2">
-        Contact
-      </h2>
-
-      <p className="mt-2 text-sm italic text-gray-400 dark:text-gray-500">
-        I'm currently open to new opportunities. Have a project in mind or
-        want to say hello?
+    <section
+      id="contact"
+      className="w-full space-y-5"
+      style={{ opacity: 1, transform: 'none' }}
+    >
+      <p className="text-2xl sm:text-3xl font-light tracking-tight text-gray-900 dark:text-white">
+        Let's work together.
       </p>
 
-      <div className="mt-6 space-y-6">
-        <div className="space-y-3">
-          <div className="flex items-center gap-3">
-            <div className="flex-1">
-              <p className="font-mono text-sm text-gray-700 dark:text-gray-300 break-all">
-                {contact.email}
-              </p>
-            </div>
-            <button
-              onClick={copyEmail}
-              className="inline-flex items-center justify-center rounded-md border border-gray-200 dark:border-gray-800 px-3 py-1.5 text-xs font-medium text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-              aria-label={copied ? 'Copied!' : 'Copy email'}
-            >
-              {copied ? (
-                <Check className="h-4 w-4 text-gray-900 dark:text-white" />
-              ) : (
-                <Copy className="h-4 w-4" />
-              )}
-            </button>
-          </div>
+      <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
+        <div className="space-y-4">
+          <p className="text-gray-500 dark:text-gray-400 text-sm sm:text-base leading-relaxed max-w-xl">
+            Available for freelance web development - Laravel, WordPress, and
+            full-stack builds. Also open to SEO, Google Search Console, and
+            Google My Business support for existing sites.
+          </p>
         </div>
 
-        <div className="space-y-2">
-          {contact.socialLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
-            >
-              <span>{link.label}</span>
-              <ArrowUpRight className="h-4 w-4" />
-            </a>
-          ))}
-          <p className="text-xs text-gray-500 dark:text-gray-400">
-            {contact.location}
-          </p>
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
+          <a
+            href={`mailto:${contact.email}`}
+            className="group flex items-center justify-between gap-4 rounded-2xl border border-gray-200/80 bg-white/90 px-4 py-4 shadow-sm shadow-gray-900/5 transition-all hover:-translate-y-1 hover:border-gray-300 hover:bg-white hover:shadow-md dark:border-slate-700/80 dark:bg-slate-900/80 dark:shadow-black/20 dark:hover:border-blue-700/70 dark:hover:bg-slate-800/90"
+          >
+            <div className="flex min-w-0 items-center gap-3">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gray-100 text-ink transition-colors group-hover:bg-gray-200 dark:bg-slate-800 dark:text-blue-100 dark:group-hover:bg-blue-950/70">
+                <Mail className="h-4 w-4" />
+              </div>
+              <div className="min-w-0">
+                <span className="block text-[10px] font-bold uppercase tracking-widest text-gray-400 transition-colors dark:text-blue-300/80 dark:group-hover:text-blue-200">
+                  Email
+                </span>
+                <p className="truncate text-sm font-normal text-gray-900 dark:text-white">
+                  {contact.email}
+                </p>
+              </div>
+            </div>
+            <ChevronRight className="h-4 w-4 shrink-0 text-gray-300 transition-all group-hover:translate-x-1 group-hover:text-gray-700 dark:text-slate-500 dark:group-hover:text-blue-200" />
+          </a>
+
+          <a
+            href="https://calendly.com/rblenon18"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex items-center justify-between gap-4 rounded-2xl border border-gray-200/80 bg-white/90 px-4 py-4 shadow-sm shadow-gray-900/5 transition-all hover:-translate-y-1 hover:border-gray-300 hover:bg-white hover:shadow-md dark:border-slate-700/80 dark:bg-slate-900/80 dark:shadow-black/20 dark:hover:border-blue-700/70 dark:hover:bg-slate-800/90"
+          >
+            <div className="flex min-w-0 items-center gap-3">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gray-100 text-ink transition-colors group-hover:bg-gray-200 dark:bg-slate-800 dark:text-blue-100 dark:group-hover:bg-blue-950/70">
+                <Calendar className="h-4 w-4" />
+              </div>
+              <div className="min-w-0">
+                <span className="block text-[10px] font-bold uppercase tracking-widest text-gray-400 transition-colors dark:text-blue-300/80 dark:group-hover:text-blue-200">
+                  Let's Talk
+                </span>
+                <p className="truncate text-sm font-normal text-gray-900 dark:text-white">
+                  Schedule a Call
+                </p>
+              </div>
+            </div>
+            <ChevronRight className="h-4 w-4 shrink-0 text-gray-300 transition-all group-hover:translate-x-1 group-hover:text-gray-700 dark:text-slate-500 dark:group-hover:text-blue-200" />
+          </a>
         </div>
       </div>
     </section>

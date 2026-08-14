@@ -18,7 +18,7 @@ export default function Home() {
       <SidebarNav />
       <main className="lg:ml-sidebar min-h-screen">
         <Hero />
-        <div className="max-w-content-max mx-auto px-4 md:px-6 py-section">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 py-section">
           <About />
           <Projects />
           <Skills />

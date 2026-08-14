@@ -2,14 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Geist Pixel';
+  src: url('/fonts/geist-pixel.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
 @layer base {
   :root {
     --color-background: 255 255 255;
     --color-ink: 10 10 10;
+    --font-geist-pixel: 'Geist Pixel';
   }
 
   .dark {
-    --color-background: 12 12 15;
+    --color-background: 18 18 18;
     --color-ink: 244 244 245;
   }
 
@@ -39,11 +47,6 @@
   }
   a:hover {
     text-decoration-color: currentColor;
-  }
-
-  .halftone-bg {
-    background-image: radial-gradient(circle, currentColor 1px, transparent 1px);
-    background-size: 9px 9px;
   }
 
   ::-webkit-scrollbar {

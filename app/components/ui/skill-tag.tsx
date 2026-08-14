@@ -1,24 +1,10 @@
-import { ReactNode } from 'react';
-
 interface SkillTagProps {
-  children: ReactNode;
-  variant?: 'default' | 'featured';
+  children: string;
 }
 
-export function SkillTag({ children, variant = 'default' }: SkillTagProps) {
-  const baseClasses =
-    'inline-flex items-center px-3 py-1 rounded-full font-mono text-xs uppercase tracking-wider';
-
-  if (variant === 'featured') {
-    return (
-      <span className={`${baseClasses} bg-ink text-background`}>
-        {children}
-      </span>
-    );
-  }
-
+export function SkillTag({ children }: SkillTagProps) {
   return (
-    <span className={`${baseClasses} border border-gray-300 text-gray-500`}>
+    <span className="inline-block rounded-md border border-gray-200 dark:border-gray-800 px-2.5 py-1 text-xs font-medium text-gray-700 dark:text-gray-300">
       {children}
     </span>
   );

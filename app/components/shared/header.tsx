@@ -32,6 +32,17 @@ export function Header() {
           .portfolio
         </Link>
         <nav className="flex items-center gap-4">
+          <div className="hidden md:flex items-center gap-4">
+            {navItems.map((item) => (
+              <Link
+                key={item.label}
+                href={item.href}
+                className="text-sm text-gray-500 hover:text-ink transition-colors font-mono uppercase tracking-wider"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </div>
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className="md:hidden p-2 text-gray-500 hover:text-ink transition-colors"

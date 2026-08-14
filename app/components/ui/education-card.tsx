@@ -1,37 +1,34 @@
+import type { EducationItem } from '../../../lib/data/types';
+
 interface EducationCardProps {
-  degree: string;
-  institution: string;
-  startDate: string;
-  endDate: string;
-  details?: string;
+  education: EducationItem;
 }
 
-export function EducationCard({
-  degree,
-  institution,
-  startDate,
-  endDate,
-  details,
-}: EducationCardProps) {
+export function EducationCard({ education }: EducationCardProps) {
+  const { degree, institution, startDate, endDate, details } = education;
+
+  const formatDate = (date: string) => {
+    const d = new Date(date);
+    return d.toLocaleDateString('en-US', { year: 'numeric', month: 'short' });
+  };
+
   return (
-    <div className="border border-gray-200 dark:border-gray-700 rounded-card-md p-card-padding bg-gray-50 dark:bg-gray-900">
-      <h3 className="text-lg font-semibold text-ink">{degree}</h3>
-      <p className="font-mono text-xs uppercase tracking-wider text-gray-500 mt-1">
+    <div className="border-b border-gray-200 dark:border-gray-800 pb-4">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
+        <h3 className="text-base sm:text-lg font-semibold text-gray-900 dark:text-white">
+          {degree}
+        </h3>
+        <p className="text-xs font-medium text-gray-400 dark:text-gray-500">
+          {formatDate(startDate)} — {formatDate(endDate)}
+        </p>
+      </div>
+      <p className="mt-1 text-sm font-medium text-gray-700 dark:text-gray-300">
         {institution}
       </p>
-      <p className="font-mono text-xs text-gray-400 mt-1">
-        {new Date(startDate).toLocaleDateString('en-US', {
-          month: 'short',
-          year: 'numeric',
-        })}{' '}
-        —{' '}
-        {new Date(endDate).toLocaleDateString('en-US', {
-          month: 'short',
-          year: 'numeric',
-        })}
-      </p>
       {details && (
-        <p className="mt-2 text-sm text-gray-500">{details}</p>
+        <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
+          {details}
+        </p>
       )}
     </div>
   );

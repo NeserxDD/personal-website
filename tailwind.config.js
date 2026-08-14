@@ -37,6 +37,10 @@ module.exports = {
         'page-padding-mobile': '1rem',
         'page-padding-desktop': '1.5rem',
       },
+      maxWidth: {
+        'content-narrow': '42rem',
+        'content-wide': '56rem',
+      },
       boxShadow: {
         card: '0 8px 22px -14px rgba(0, 0, 0, 0.25)',
         'card-hover': '0 18px 36px -20px rgba(0, 0, 0, 0.40)',

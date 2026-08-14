@@ -1,8 +1,9 @@
-export function Sun() {
+import type { SVGProps } from 'react';
+
+export function Sun(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
-      width="20"
-      height="20"
+      {...props}
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
@@ -21,11 +22,10 @@ export function Sun() {
   );
 }
 
-export function Moon() {
+export function Moon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
-      width="20"
-      height="20"
+      {...props}
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
@@ -36,11 +36,10 @@ export function Moon() {
   );
 }
 
-export function Monitor() {
+export function Monitor(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
-      width="20"
-      height="20"
+      {...props}
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
@@ -53,11 +52,10 @@ export function Monitor() {
   );
 }
 
-export function ArrowUpRight() {
+export function ArrowUpRight(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
-      width="14"
-      height="14"
+      {...props}
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
@@ -69,11 +67,10 @@ export function ArrowUpRight() {
   );
 }
 
-export function Copy() {
+export function Copy(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
-      width="16"
-      height="16"
+      {...props}
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
@@ -85,11 +82,10 @@ export function Copy() {
   );
 }
 
-export function Check() {
+export function Check(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
-      width="14"
-      height="14"
+      {...props}
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"

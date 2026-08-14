@@ -1,0 +1,32 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Next.js
+.next/
+out/
+
+# Output
+dist/
+
+# Environment
+.env
+.env.local
+.env.development/
+.env.test/
+.env.production/
+
+# Debug logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# SDD workspace (keep tracked, but ignore generated artifacts)
+*.log

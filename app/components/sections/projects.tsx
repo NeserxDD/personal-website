@@ -5,13 +5,26 @@ import { siteConfig } from '../../../lib/data/content';
 import { ProjectCard } from '../ui/project-card';
 import { ChevronLeft, ChevronRight } from '../ui/icons';
 
+const ITEMS_PER_PAGE = 4;
+
 export function Projects() {
   const projects = siteConfig.projects;
-  const [current, setCurrent] = useState(0);
+  const [startIndex, setStartIndex] = useState(0);
 
-  const next = () => setCurrent((prev) => (prev + 1) % projects.length);
-  const prev = () =>
-    setCurrent((prev) => (prev - 1 + projects.length) % projects.length);
+  const endIndex = Math.min(startIndex + ITEMS_PER_PAGE, projects.length);
+  const visibleProjects = projects.slice(startIndex, endIndex);
+
+  const next = () => {
+    const nextStart = startIndex + ITEMS_PER_PAGE;
+    if (nextStart < projects.length) setStartIndex(nextStart);
+  };
+
+  const prev = () => {
+    setStartIndex(Math.max(0, startIndex - ITEMS_PER_PAGE));
+  };
+
+  const canPrev = startIndex > 0;
+  const canNext = endIndex < projects.length;
 
   return (
     <section id="projects" className="mt-12 sm:mt-14">
@@ -32,7 +45,7 @@ export function Projects() {
           </svg>
         </div>
         <span className="font-display text-xs uppercase tracking-wider text-gray-400">
-          02 — projects
+          01 — projects
         </span>
       </div>
 
@@ -45,42 +58,33 @@ export function Projects() {
         and full-stack development.
       </p>
 
-      <div className="mt-8 relative">
-        <div className="relative overflow-hidden rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900/30 p-6 sm:p-8">
-          {projects.map((project, index) => (
-            <div
-              key={project.id}
-              className={`absolute inset-0 transition-opacity duration-300 ${
-                index === current
-                  ? 'opacity-100 pointer-events-auto'
-                  : 'opacity-0 pointer-events-none'
-              }`}
-            >
-              {index === current && (
-                <ProjectCard project={project} highlight={true} />
-              )}
-            </div>
+      <div className="mt-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
+          {visibleProjects.map((project) => (
+            <ProjectCard key={project.id} project={project} />
           ))}
         </div>
 
-        {projects.length > 1 && (
-          <div className="mt-6 flex items-center justify-center gap-4">
+        {projects.length > ITEMS_PER_PAGE && (
+          <div className="mt-6 flex items-center justify-center gap-6">
             <button
               onClick={prev}
-              aria-label="Previous project"
-              className="inline-flex items-center justify-center rounded-full border border-gray-200 dark:border-gray-800 p-2 text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+              disabled={!canPrev}
+              aria-label="Previous projects"
+              className={`inline-flex items-center justify-center rounded-full border border-gray-200 dark:border-gray-800 p-2 text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors disabled:opacity-40 disabled:cursor-not-allowed`}
             >
               <ChevronLeft className="h-5 w-5" />
             </button>
 
             <span className="font-mono text-xs text-gray-400">
-              {current + 1} / {projects.length}
+              {startIndex + 1}–{endIndex} / {projects.length}
             </span>
 
             <button
               onClick={next}
-              aria-label="Next project"
-              className="inline-flex items-center justify-center rounded-full border border-gray-200 dark:border-gray-800 p-2 text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+              disabled={!canNext}
+              aria-label="Next projects"
+              className={`inline-flex items-center justify-center rounded-full border border-gray-200 dark:border-gray-800 p-2 text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors disabled:opacity-40 disabled:cursor-not-allowed`}
             >
               <ChevronRight className="h-5 w-5" />
             </button>

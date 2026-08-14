@@ -48,7 +48,7 @@ export interface Certification {
 }
 
 export interface SocialLink {
-  platform: 'github' | 'linkedin' | 'email' | 'other';
+  platform: 'github' | 'linkedin' | 'email' | 'other' | 'facebook' | 'twitter';
   url?: string;
   label: string;
 }
@@ -73,5 +73,6 @@ export interface SiteConfig {
   contact: {
     email: string;
     location: string;
+    socialLinks: SocialLink[];
   };
 }

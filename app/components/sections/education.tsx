@@ -12,7 +12,7 @@ export function Education() {
           </svg>
         </div>
         <span className="font-display text-xs uppercase tracking-wider text-gray-400">
-          05 — education
+          04 — education
         </span>
       </div>
 

@@ -12,7 +12,7 @@ export function OutsideTech() {
           </svg>
         </div>
         <span className="font-display text-xs uppercase tracking-wider text-gray-400">
-          07 — outside tech
+          06 — outside tech
         </span>
       </div>
 

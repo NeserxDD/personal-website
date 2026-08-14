@@ -1,5 +1,4 @@
 import './globals.css';
-import '../styles/fonts.css';
 import { Geist, Geist_Mono, Source_Serif_4 } from 'next/font/google';
 import { ThemeProvider } from './theme/provider';
 

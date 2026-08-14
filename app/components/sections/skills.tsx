@@ -11,7 +11,7 @@ export function Skills() {
           </svg>
         </div>
         <span className="font-display text-xs uppercase tracking-wider text-gray-400">
-          03 — skills
+          02 — skills
         </span>
       </div>
 

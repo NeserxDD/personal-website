@@ -13,7 +13,7 @@ export function Experience() {
           </svg>
         </div>
         <span className="font-display text-xs uppercase tracking-wider text-gray-400">
-          04 — experience
+          03 — experience
         </span>
       </div>
 

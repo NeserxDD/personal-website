@@ -3,6 +3,7 @@ import { ArrowUpRight } from '../ui/icons';
 
 export function Hero() {
   const { profile } = siteConfig;
+  const aboutText = siteConfig.about[0];
 
   return (
     <section
@@ -45,9 +46,9 @@ export function Hero() {
           ))}
         </div>
 
-        {/* Subtitle */}
-        <p className="text-gray-500 max-w-md mx-auto mb-6">
-          {profile.subtitle}
+        {/* About paragraph */}
+        <p className="text-sm text-gray-500 dark:text-gray-400 max-w-md mx-auto mb-6">
+          {aboutText}
         </p>
 
         {/* View Resume button */}

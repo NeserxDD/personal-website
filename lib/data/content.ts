@@ -185,5 +185,22 @@ export const siteConfig: SiteConfig = {
   contact: {
     email: 'rblenon18@gmail.com',
     location: 'San Francisco, CA',
+    socialLinks: [
+      {
+        platform: 'linkedin',
+        label: 'LinkedIn',
+        url: 'https://linkedin.com/in/rblenon18',
+      },
+      {
+        platform: 'facebook',
+        label: 'Facebook',
+        url: 'https://facebook.com/rblenon18',
+      },
+      {
+        platform: 'twitter',
+        label: 'Twitter',
+        url: 'https://twitter.com/rblenon18',
+      },
+    ],
   },
 };

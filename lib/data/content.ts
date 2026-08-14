@@ -2,7 +2,7 @@ import type { SiteConfig } from './types';
 
 export const siteConfig: SiteConfig = {
   profile: {
-    name: 'Your Name',
+    name: 'ERNES GLENN DALOPE',
     role: 'Entry-Level IT Support | Network Engineering | Software Engineering',
     subtitle:
       'Building systems that work, networks that connect, code that scales.',
@@ -62,13 +62,14 @@ export const siteConfig: SiteConfig = {
     },
     {
       id: '5',
-      title: 'Portfolio Website',
+      title: 'Cloud Cost Analyzer',
       description:
-        'A minimal portfolio built with Next.js and the bryl-minimal design system.',
-      techStack: ['Next.js', 'TypeScript', 'Tailwind CSS'],
-      thumbnail: 'https://placehold.co/400x225?text=Portfolio',
+        'A web app for analyzing AWS and GCP cost trends with automated reports.',
+      techStack: ['Next.js', 'AWS SDK', 'Python'],
+      thumbnail: 'https://placehold.co/400x225?text=Cost+Analyzer',
       links: {
         github: 'https://github.com/NeserxDD',
+        live: 'https://example.com',
       },
     },
   ],
@@ -185,22 +186,5 @@ export const siteConfig: SiteConfig = {
   contact: {
     email: 'rblenon18@gmail.com',
     location: 'San Francisco, CA',
-    socialLinks: [
-      {
-        platform: 'linkedin',
-        label: 'LinkedIn',
-        url: 'https://linkedin.com/in/rblenon18',
-      },
-      {
-        platform: 'facebook',
-        label: 'Facebook',
-        url: 'https://facebook.com/rblenon18',
-      },
-      {
-        platform: 'twitter',
-        label: 'Twitter',
-        url: 'https://twitter.com/rblenon18',
-      },
-    ],
   },
 };

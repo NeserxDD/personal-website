@@ -73,6 +73,5 @@ export interface SiteConfig {
   contact: {
     email: string;
     location: string;
-    socialLinks: SocialLink[];
   };
 }

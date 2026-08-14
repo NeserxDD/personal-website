@@ -38,14 +38,9 @@ function ThemeScript() {
           (function() {
             try {
               var stored = localStorage.getItem('theme');
-              var theme = stored || 'system';
+              var theme = stored || 'light';
               var root = document.documentElement;
-              if (theme === 'system') {
-                var dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                root.classList.toggle('dark', dark);
-              } else {
-                root.classList.toggle('dark', theme === 'dark');
-              }
+              root.classList.toggle('dark', theme === 'dark');
             } catch (e) {}
           })();
         `,

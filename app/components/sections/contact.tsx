@@ -42,7 +42,7 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="w-full space-y-5"
+      className="w-full space-y-5 mt-20 sm:mt-24"
       style={{ opacity: 1, transform: 'none' }}
     >
       <div className="mb-6 flex items-center gap-4">

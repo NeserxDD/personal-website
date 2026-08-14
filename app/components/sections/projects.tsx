@@ -13,6 +13,8 @@ export function Projects() {
 
   const endIndex = Math.min(startIndex + ITEMS_PER_PAGE, projects.length);
   const visibleProjects = projects.slice(startIndex, endIndex);
+  const currentPage = Math.floor(startIndex / ITEMS_PER_PAGE) + 1;
+  const totalPages = Math.ceil(projects.length / ITEMS_PER_PAGE);
 
   const next = () => {
     const nextStart = startIndex + ITEMS_PER_PAGE;
@@ -77,7 +79,7 @@ export function Projects() {
             </button>
 
             <span className="font-mono text-xs text-gray-400">
-              {startIndex + 1}–{endIndex} / {projects.length}
+              {currentPage} / {totalPages}
             </span>
 
             <button

@@ -6,33 +6,21 @@ import type { Theme, ThemeContextType } from './types';
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setThemeState] = useState<Theme>('system');
+  const [theme, setThemeState] = useState<Theme>('light');
 
   useEffect(() => {
     const stored = localStorage.getItem('theme') as Theme | null;
-    if (stored) {
+    if (stored === 'light' || stored === 'dark') {
       setThemeState(stored);
     }
   }, []);
 
   useEffect(() => {
     const root = document.documentElement;
-
-    if (theme === 'system') {
-      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-      root.classList.toggle('dark', mediaQuery.matches);
-    } else {
-      root.classList.toggle('dark', theme === 'dark');
-    }
+    root.classList.toggle('dark', theme === 'dark');
   }, [theme]);
 
-  const resolvedTheme: 'light' | 'dark' =
-    theme === 'system'
-      ? typeof window !== 'undefined' &&
-        window.matchMedia('(prefers-color-scheme: dark)').matches
-        ? 'dark'
-        : 'light'
-      : theme;
+  const resolvedTheme: 'light' | 'dark' = theme;
 
   const setTheme = (t: Theme) => {
     localStorage.setItem('theme', t);

@@ -30,7 +30,7 @@ export function Hero() {
         </div>
 
         {/* Name */}
-        <h1 className="font-display text-5xl sm:text-6xl lowercase text-ink mb-2">
+        <h1 className="font-display text-5xl sm:text-6xl lowercase text-gray-900 dark:text-white mb-2">
           {profile.name}
         </h1>
 

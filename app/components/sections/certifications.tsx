@@ -13,6 +13,8 @@ export function Certifications() {
 
   const endIndex = Math.min(startIndex + ITEMS_PER_PAGE, certs.length);
   const visibleCerts = certs.slice(startIndex, endIndex);
+  const currentPage = Math.floor(startIndex / ITEMS_PER_PAGE) + 1;
+  const totalPages = Math.ceil(certs.length / ITEMS_PER_PAGE);
 
   const next = () => {
     const nextStart = startIndex + ITEMS_PER_PAGE;
@@ -70,7 +72,7 @@ export function Certifications() {
             </button>
 
             <span className="font-mono text-xs text-gray-400">
-              {startIndex + 1}–{endIndex} / {certs.length}
+              {currentPage} / {totalPages}
             </span>
 
             <button

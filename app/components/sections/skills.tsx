@@ -19,33 +19,20 @@ export function Skills() {
         Skills
       </h2>
 
-      <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="space-y-6">
-          <h3 className="font-semibold text-gray-900 dark:text-white">Technical</h3>
-          {siteConfig.skills.technical.map((category) => (
-            <div key={category.category} className="space-y-2">
-              <h4 className="font-mono text-xs uppercase tracking-wider text-gray-400">
-                {category.category}
-              </h4>
-              <div className="flex flex-wrap gap-2">
-                {category.items.map((skill) => (
-                  <SkillTag key={skill}>{skill}</SkillTag>
-                ))}
-              </div>
+      <div className="mt-6 space-y-6">
+        <h3 className="font-semibold text-gray-900 dark:text-white">Technical</h3>
+        {siteConfig.skills.technical.map((category) => (
+          <div key={category.category} className="space-y-2">
+            <h4 className="font-mono text-xs uppercase tracking-wider text-gray-400">
+              {category.category}
+            </h4>
+            <div className="flex flex-wrap gap-2">
+              {category.items.map((skill) => (
+                <SkillTag key={skill}>{skill}</SkillTag>
+              ))}
             </div>
-          ))}
-        </div>
-        <div className="space-y-4">
-          <h3 className="font-semibold text-gray-900 dark:text-white">Soft Skills</h3>
-          <div className="space-y-2">
-            {siteConfig.skills.soft.map((skill) => (
-              <div key={skill} className="flex items-center gap-2">
-                <div className="w-1.5 h-1.5 rounded-full bg-gray-400" />
-                <span className="font-mono text-sm text-gray-500 dark:text-gray-400">{skill}</span>
-              </div>
-            ))}
           </div>
-        </div>
+        ))}
       </div>
     </section>
   );

@@ -52,6 +52,7 @@ export interface SocialLink {
   platform: 'github' | 'linkedin' | 'email' | 'other' | 'facebook' | 'twitter';
   url?: string;
   label: string;
+  value?: string;
 }
 
 export interface SkillCategory {
@@ -65,7 +66,6 @@ export interface SiteConfig {
   projects: Project[];
   skills: {
     technical: SkillCategory[];
-    soft: string[];
   };
   experience: ExperienceItem[];
   education: EducationItem[];
@@ -74,5 +74,6 @@ export interface SiteConfig {
   contact: {
     email: string;
     location: string;
+    socialLinks: SocialLink[];
   };
 }

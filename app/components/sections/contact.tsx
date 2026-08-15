@@ -1,6 +1,13 @@
 import type { ReactNode } from 'react';
 import { siteConfig } from '../../../lib/data/content';
-import { Mail, LinkedIn, Facebook, Twitter, ChevronRight, } from '../ui/icons';
+import { Mail, LinkedIn, Facebook, Twitter, ChevronRight } from '../ui/icons';
+
+const iconMap: Record<string, ReactNode> = {
+  email: <Mail className="h-4 w-4" />,
+  linkedin: <LinkedIn className="h-4 w-4" />,
+  facebook: <Facebook className="h-4 w-4" />,
+  twitter: <Twitter className="h-4 w-4" />,
+};
 
 interface ContactCard {
   label: string;
@@ -12,32 +19,12 @@ interface ContactCard {
 export function Contact() {
   const { contact } = siteConfig;
 
-  const cards: ContactCard[] = [
-    {
-      label: 'Email',
-      value: contact.email,
-      href: `mailto:${contact.email}`,
-      icon: <Mail className="h-4 w-4" />,
-    },
-    {
-      label: 'LinkedIn',
-      value: 'linkedin.com/in/ernes-glenn-dalope',
-      href: 'https://www.linkedin.com/in/ernes-glenn-dalope-2282a9316/',
-      icon: <LinkedIn className="h-4 w-4" />,
-    },
-    {
-      label: 'Facebook',
-      value: 'facebook.com/rblenon18',
-      href: 'https://facebook.com/rblenon18',
-      icon: <Facebook className="h-4 w-4" />,
-    },
-    {
-      label: 'Twitter',
-      value: 'twitter.com/rblenon18',
-      href: 'https://twitter.com/rblenon18',
-      icon: <Twitter className="h-4 w-4" />,
-    },
-  ];
+  const cards: ContactCard[] = contact.socialLinks.map((link) => ({
+    label: link.label,
+    value: link.value ?? link.url ?? '',
+    href: link.url ?? '',
+    icon: iconMap[link.platform] ?? <Mail className="h-4 w-4" />,
+  }));
 
   return (
     <section

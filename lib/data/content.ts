@@ -83,29 +83,23 @@ technical: [
       'Next.js',
     ],
   },
-{
-  category: 'Tools & Productivity',
-  items: [
-    'VS Code',
-    'Android Studio',
-    'Git',
-    'GitHub',
-    'Claude Code',
-    'OpenCode',
-    'Figma',
-    'Canva',
-    'Microsoft Word',
-    'Microsoft Excel',
-    'Microsoft PowerPoint',
-  ],
-},
-],
-    soft: [
-      'Communication',
-      'Problem-solving',
-      'Documentation',
-      'Customer Service',
+  {
+    category: 'Tools & Productivity',
+    items: [
+      'VS Code',
+      'Android Studio',
+      'Git',
+      'GitHub',
+      'Claude Code',
+      'OpenCode',
+      'Figma',
+      'Canva',
+      'Microsoft Word',
+      'Microsoft Excel',
+      'Microsoft PowerPoint',
     ],
+  },
+  ],
   },
   experience: [
     {
@@ -170,5 +164,31 @@ technical: [
   contact: {
     email: 'ernesdalope02@gmail.com',
     location: 'San Francisco, CA',
+    socialLinks: [
+      {
+        platform: 'email',
+        label: 'Email',
+        url: 'mailto:ernesdalope02@gmail.com',
+        value: 'ernesdalope02@gmail.com',
+      },
+      {
+        platform: 'linkedin',
+        label: 'LinkedIn',
+        url: 'https://www.linkedin.com/in/ernes-glenn-dalope-2282a9316/',
+        value: 'linkedin.com/in/ernes-glenn-dalope',
+      },
+      {
+        platform: 'facebook',
+        label: 'Facebook',
+        url: 'https://facebook.com/rblenon18',
+        value: 'facebook.com/rblenon18',
+      },
+      {
+        platform: 'twitter',
+        label: 'Twitter',
+        url: 'https://twitter.com/rblenon18',
+        value: 'twitter.com/rblenon18',
+      },
+    ],
   },
 };

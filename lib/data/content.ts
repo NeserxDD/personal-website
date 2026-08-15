@@ -180,8 +180,8 @@ technical: [
       {
         platform: 'facebook',
         label: 'Facebook',
-        url: 'https://facebook.com/rblenon18',
-        value: 'facebook.com/rblenon18',
+        url: 'https://www.facebook.com/NESERXXX/',
+        value: 'facebook.com/Ernes-Dalope',
       },
       {
         platform: 'github',

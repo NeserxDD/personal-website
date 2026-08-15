@@ -32,6 +32,7 @@ export interface EducationItem {
   id: string;
   degree: string;
   institution: string;
+  location?: string;
   startDate: string;
   endDate: string;
   details?: string;

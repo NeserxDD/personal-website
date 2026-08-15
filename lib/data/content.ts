@@ -128,10 +128,11 @@ technical: [
       id: '1',
       degree: 'Bachelor of Science in Computer Science',
       institution: 'Pangasinan State University',
+      location: 'Lingayen, Pangasinan',
       startDate: '2021-08-22',
       endDate: '2025-08-14',
-   
-    },
+
+},
   ],
   certifications: [
       {

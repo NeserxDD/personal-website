@@ -5,7 +5,7 @@ interface EducationCardProps {
 }
 
 export function EducationCard({ education }: EducationCardProps) {
-  const { degree, institution, startDate, endDate, details } = education;
+  const { degree, institution, location, startDate, endDate, details } = education;
 
   const formatDate = (date: string) => {
     const d = new Date(date);
@@ -24,6 +24,12 @@ export function EducationCard({ education }: EducationCardProps) {
       </div>
       <p className="mt-1 text-sm font-medium text-gray-700 dark:text-gray-300">
         {institution}
+        {location && (
+          <span className="text-gray-500 dark:text-gray-400">
+            {' — '}
+            {location}
+          </span>
+        )}
       </p>
       {details && (
         <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">

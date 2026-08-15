@@ -1,12 +1,12 @@
 import type { ReactNode } from 'react';
 import { siteConfig } from '../../../lib/data/content';
-import { Mail, LinkedIn, Facebook, Twitter, ChevronRight } from '../ui/icons';
+import { Mail, LinkedIn, Facebook, GitHub, ChevronRight } from '../ui/icons';
 
 const iconMap: Record<string, ReactNode> = {
   email: <Mail className="h-4 w-4" />,
   linkedin: <LinkedIn className="h-4 w-4" />,
   facebook: <Facebook className="h-4 w-4" />,
-  twitter: <Twitter className="h-4 w-4" />,
+  github: <GitHub className="h-4 w-4" />,
 };
 
 interface ContactCard {

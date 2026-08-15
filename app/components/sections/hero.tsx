@@ -1,5 +1,5 @@
 import { siteConfig } from '../../../lib/data/content';
-import { ArrowUpRight } from '../ui/icons';
+import { ArrowUpRight, Mail, LinkedIn, Viber } from '../ui/icons';
 
 export function Hero() {
   const { profile } = siteConfig;
@@ -59,6 +59,33 @@ export function Hero() {
           >
             <span>View Resume</span>
             <ArrowUpRight className="h-4 w-4" />
+          </a>
+        </div>
+
+        {/* Social icons */}
+        <div className="flex justify-center gap-6 mt-8">
+          <a
+            href="mailto:ernesdalope02@gmail.com"
+            className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
+            aria-label="Email"
+          >
+            <Mail className="h-5 w-5" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/ernes-glenn-dalope-2282a9316/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
+            aria-label="LinkedIn"
+          >
+            <LinkedIn className="h-5 w-5" />
+          </a>
+          <a
+            href="viber://chat?number=639709544387"
+            className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
+            aria-label="Viber"
+          >
+            <Viber className="h-5 w-5" />
           </a>
         </div>
       </div>

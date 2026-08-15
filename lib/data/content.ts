@@ -160,7 +160,7 @@ technical: [
     },
   ],
   outsideTech:
-    "When I'm not debugging code or configuring networks, I enjoy hiking, photography, and playing indie video games.",
+    "When I’m not working with technology, I enjoy playing different kinds of sports, watching movies and series, playing video games, and working out. I also enjoy learning new things and trying out different hobbies whenever I get the chance.",
   contact: {
     email: 'ernesdalope02@gmail.com',
     location: 'San Francisco, CA',

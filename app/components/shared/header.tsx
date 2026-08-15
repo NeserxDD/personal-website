@@ -9,7 +9,7 @@ export function Header() {
       <div className="max-w-content-wide mx-auto flex items-center justify-between py-4 px-4 md:px-6">
         <Link
           href="#hero"
-          className="font-display text-xl text-ink lowercase"
+          className="font-display text-xl text-ink "
         >
           EGD
         </Link>

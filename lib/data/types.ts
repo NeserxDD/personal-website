@@ -9,7 +9,7 @@ export interface ProfileData {
 export interface Project {
   id: string;
   title: string;
-  description: string;
+  description: string[];
   techStack: string[];
   thumbnail: string;
   links?: {

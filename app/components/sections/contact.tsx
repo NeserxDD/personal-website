@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 import { siteConfig } from '../../../lib/data/content';
-import { Mail, LinkedIn, Facebook, Twitter, ChevronRight } from '../ui/icons';
+import { Mail, LinkedIn, Facebook, Twitter, ChevronRight, } from '../ui/icons';
 
 interface ContactCard {
   label: string;
@@ -21,8 +21,8 @@ export function Contact() {
     },
     {
       label: 'LinkedIn',
-      value: 'linkedin.com/in/rblenon18',
-      href: 'https://linkedin.com/in/rblenon18',
+      value: 'linkedin.com/in/ernes-glenn-dalope',
+      href: 'https://www.linkedin.com/in/ernes-glenn-dalope-2282a9316/',
       icon: <LinkedIn className="h-4 w-4" />,
     },
     {
@@ -58,15 +58,13 @@ export function Contact() {
       </div>
 
       <p className="text-2xl sm:text-3xl font-light tracking-tight text-gray-900 dark:text-white">
-        Let's work together.
+        Let's connect.
       </p>
 
       <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
         <div className="space-y-4">
           <p className="text-gray-500 dark:text-gray-400 text-sm sm:text-base leading-relaxed max-w-xl">
-            Available for freelance web development - Laravel, WordPress, and
-            full-stack builds. Also open to SEO, Google Search Console, and
-            Google My Business support for existing sites.
+            I'm open to entry-level opportunities in IT Support, Networking, Software Development, and other technology-related roles. I'm always interested in learning, taking on new challenges, and growing my skills.
           </p>
         </div>
 

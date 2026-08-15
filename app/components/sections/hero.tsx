@@ -30,13 +30,13 @@ export function Hero() {
         </div>
 
         {/* Name */}
-        <h1 className="font-display text-5xl sm:text-6xl lowercase text-gray-900 dark:text-white mb-2">
+        <h1 className="font-display text-5xl sm:text-6xl text-gray-900 dark:text-white mb-2">
           {profile.name}
         </h1>
 
         {/* Role tags */}
         <div className="flex flex-wrap justify-center gap-2 mb-4">
-          {profile.role.split('|').map((tag, i) => (
+          {profile.role.split('-').map((tag, i) => (
             <span
               key={i}
               className="font-mono text-xs uppercase tracking-wider text-gray-500"

@@ -3,30 +3,33 @@ import { ArrowUpRight } from './icons';
 
 interface ProjectCardProps {
   project: Project;
+  delay?: string;
 }
 
-export function ProjectCard({ project }: ProjectCardProps) {
+export function ProjectCard({ project, delay = '0ms' }: ProjectCardProps) {
   return (
     <div className="group flex flex-col gap-4">
-      <div className="relative overflow-hidden rounded-lg">
+      <div className="relative overflow-hidden rounded-lg opacity-0 translate-y-4 animate-fade-in-up" style={{ animationDelay: delay }}>
         <img
           src={project.thumbnail}
           alt={project.title}
           className="w-full object-cover transition-transform duration-500 group-hover:scale-105 aspect-video"
         />
       </div>
-      <div className="flex flex-col">
+      <div className="flex flex-col" style={{ animationDelay: delay }}>
         <h3 className="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-gray-600 transition-colors">
           {project.title}
         </h3>
-        <p className="mt-1 text-sm text-gray-500 dark:text-gray-400 leading-relaxed line-clamp-2">
-          {project.description}
-        </p>
+        <ul className="mt-1 space-y-1 text-sm text-gray-500 dark:text-gray-400 leading-relaxed list-disc list-outside pl-4">
+          {project.description.map((desc, i) => (
+            <li key={i}>{desc}</li>
+          ))}
+        </ul>
         <div className="mt-2 flex flex-wrap gap-1.5">
           {project.techStack.map((tech) => (
             <span
               key={tech}
-              className="font-mono text-xs uppercase tracking-wider text-gray-500"
+              className="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-800 px-2.5 py-1 font-mono text-xs uppercase tracking-wider text-gray-500"
             >
               {tech}
             </span>

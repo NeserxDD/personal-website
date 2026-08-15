@@ -2,96 +2,104 @@ import type { SiteConfig } from './types';
 
 export const siteConfig: SiteConfig = {
   profile: {
-    name: 'ERNES GLENN DALOPE',
-    role: 'Entry-Level IT Support | Network Engineering | Software Engineering',
+    name: 'Ernes Glenn Dalope',
+    role: 'Computer Science |- It Support |- Software & Networking',
     subtitle:
       'Building systems that work, networks that connect, code that scales.',
-    photoMain: '/images/profile-main.svg',
-    photoHover: '/images/profile-hover.svg',
+    photoMain: '/images/hoveranime.jpg',
+    photoHover: '/images/hoverprofile.png',
   },
   about: [
-    "Placeholder paragraph about yourself. Replace with your bio about what drives you in tech — whether it's solving network puzzles, building web applications, or helping users navigate technology.",
-    "Placeholder second paragraph about your journey. Replace with your story about how you got into IT Support, Network Engineering, or Software Engineering — what experiences shaped your path.",
+    "I’m Ernes, a Computer Science graduate with a strong interest in IT support, networking, and software. I enjoy solving technical problems, learning new technologies, and understanding how systems work. I’m continuously developing my skills and looking forward to opportunities where I can gain experience, contribute to a team, and grow in the IT field.",
+
   ],
   projects: [
     {
       id: '1',
-      title: 'Portfolio Website',
-      description:
-        'A minimal portfolio built with Next.js and the bryl-minimal design system.',
-      techStack: ['Next.js', 'TypeScript', 'Tailwind CSS'],
-      thumbnail: 'https://placehold.co/400x225?text=Portfolio',
+      title: 'Temperature-Regulating-Smart-Coaster',
+      description: [
+        'Built an IoT-based smart coaster with Arduino and a mobile app for real-time temperature monitoring and control.',
+        'Maintained beverage temperature accuracy within ±5°C, demonstrating reliability of the system.',
+      ],
+      techStack: ['Arduino', 'C++', 'Kotlin'],
+      thumbnail: 'https://placehold.co/400x225?text=Coaster',
       links: {
-        github: 'https://github.com/NeserxDD',
+        github: 'https://github.com/NeserxDD/Temperature-Regulating-Smart-Coaster',
       },
     },
     {
       id: '2',
-      title: 'Network Config Toolkit',
-      description:
-        'A collection of Python and Bash scripts for network device configuration auditing.',
-      techStack: ['Python', 'Bash', 'YAML'],
-      thumbnail: 'https://placehold.co/400x225?text=Network+Tool',
+      title: 'Brum App',
+      description: [
+        'Developed a mobile app to monitor 8S Good Housekeeping compliance in government offices and hospitals.',
+        'Reduced manual inspection and reporting time by approximately 40%, improving operational efficiency.',
+      ],
+      techStack: ['Flutter'],
+      thumbnail: 'https://placehold.co/400x225?text=Brum+App',
       links: {
-        github: 'https://github.com/NeserxDD',
+        github: 'https://github.com/NeserxDD/BRUM/tree/main',
       },
     },
-    {
-      id: '3',
-      title: 'API Dashboard',
-      description:
-        'A React dashboard consuming REST APIs with live data visualization.',
-      techStack: ['React', 'REST API', 'Chart.js'],
-      thumbnail: 'https://placehold.co/400x225?text=Dashboard',
-      links: {
-        github: 'https://github.com/NeserxDD',
-        live: 'https://example.com',
-      },
-    },
-    {
-      id: '4',
-      title: 'System Monitor',
-      description:
-        'A real-time system monitoring dashboard with alerting and log analysis.',
-      techStack: ['Next.js', 'Socket.IO', 'Tailwind CSS'],
-      thumbnail: 'https://placehold.co/400x225?text=Monitor',
-      links: {
-        github: 'https://github.com/NeserxDD',
-        live: 'https://example.com',
-      },
-    },
-    {
-      id: '5',
-      title: 'Cloud Cost Analyzer',
-      description:
-        'A web app for analyzing AWS and GCP cost trends with automated reports.',
-      techStack: ['Next.js', 'AWS SDK', 'Python'],
-      thumbnail: 'https://placehold.co/400x225?text=Cost+Analyzer',
-      links: {
-        github: 'https://github.com/NeserxDD',
-        live: 'https://example.com',
-      },
-    },
+
+
   ],
   skills: {
-    technical: [
-      {
-        category: 'Languages',
-        items: ['HTML', 'CSS', 'JavaScript', 'Python', 'Bash'],
-      },
-      {
-        category: 'Frameworks',
-        items: ['React', 'Next.js'],
-      },
-      {
-        category: 'Tools',
-        items: ['Git', 'Docker', 'VS Code'],
-      },
-      {
-        category: 'Networks',
-        items: ['TCP/IP', 'DNS', 'VLAN', 'Cisco IOS'],
-      },
+technical: [
+  {
+    category: 'IT Support & Systems',
+    items: [
+      'Hardware & Software Troubleshooting',
+      'Operating Systems — Windows, Linux Basics',
+      'User Support',
+      'File & System Management',
+      'Systems Administration',
+      'Software Installation & Configuration',
     ],
+  },
+  {
+    category: 'Networking & Security',
+    items: [
+      'Networking Fundamentals',
+      'TCP/IP',
+      'DNS',
+      'DHCP',
+      'LAN/WAN Fundamentals',
+      'Network Configuration Fundamentals',
+      'Network Troubleshooting',
+    ],
+  },
+  {
+    category: 'Programming & Development',
+    items: [
+      'Flutter',
+      'Dart',
+      'Python',
+      'Java',
+      'C++',
+      'JavaScript',
+      'SQL',
+      'HTML',
+      'CSS',
+      'Next.js',
+    ],
+  },
+{
+  category: 'Tools & Productivity',
+  items: [
+    'VS Code',
+    'Android Studio',
+    'Git',
+    'GitHub',
+    'Claude Code',
+    'OpenCode',
+    'Figma',
+    'Canva',
+    'Microsoft Word',
+    'Microsoft Excel',
+    'Microsoft PowerPoint',
+  ],
+},
+],
     soft: [
       'Communication',
       'Problem-solving',
@@ -102,89 +110,64 @@ export const siteConfig: SiteConfig = {
   experience: [
     {
       id: '1',
-      role: 'IT Support Intern',
-      company: 'TechCorp Inc.',
-      location: 'San Francisco, CA',
-      startDate: '2025-06-01',
-      endDate: '2025-08-31',
-      bullets: [
-        'Provided first-line support for 50+ internal users',
-        'Managed Active Directory account provisioning and deprovisioning',
-        'Configured and troubleshot network printers across 3 office locations',
-      ],
-    },
-    {
-      id: '2',
-      role: 'Help Desk Technician (Part-time)',
-      company: 'University IT',
-      location: 'Remote',
-      startDate: '2024-09-01',
+      role: 'Application Programmer',
+      company: 'Province of Pangasinan',
+      location: 'Lingayen, Pangasinan',
+      startDate: '2025-02-01',
       endDate: '2025-05-31',
       bullets: [
-        'Resolved 200+ tickets via Slack and email support channels',
-        'Created and maintained documentation for common issues',
-        'Supported macOS, Windows, and Linux users across departments',
+        'Contributed to the development, updating, and maintenance of a mobile application for internal monitoring processes.',
+        'Resolved user-reported issues, improving system reliability and reducing downtime.',
+        'Collaborated with team members to enhance application features based on operational and user feedback, improving workflow efficiency.',
       ],
     },
-    {
-      id: '3',
-      role: 'Freelance Full-Stack Developer',
-      company: 'Self-employed',
-      location: 'Remote',
-      startDate: '2024-01-01',
-      endDate: '2024-12-31',
-      bullets: [
-        'Built 3 client websites using React and Next.js',
-        'Deployed applications on Vercel with CI/CD pipelines',
-        'Implemented responsive designs with Tailwind CSS',
-      ],
-    },
+
   ],
   education: [
     {
       id: '1',
-      degree: 'B.S. Computer Science',
-      institution: 'University of Technology',
-      startDate: '2022-09-01',
-      endDate: '2026-05-31',
-      details:
-        'Relevant Coursework: Computer Networks, Operating Systems, Web Development, Database Systems',
+      degree: 'Bachelor of Science in Computer Science',
+      institution: 'Pangasinan State University',
+      startDate: '2021-08-22',
+      endDate: '2025-08-14',
+   
     },
   ],
   certifications: [
-    {
+      {
       id: '1',
-      name: 'CompTIA Network+',
-      issuer: 'CompTIA',
-      dateEarned: '2025-03-15',
-      badgeImage: 'https://placehold.co/80x80?text=Network+',
+      name: 'Google IT Support',
+      issuer: 'Google',
+      dateEarned: '2026-01-20',
+      badgeImage: '/images/googleitsupport.jpeg',
     },
     {
       id: '2',
-      name: 'AWS Certified Cloud Practitioner',
-      issuer: 'Amazon Web Services',
-      dateEarned: '2025-01-10',
-      badgeImage: 'https://placehold.co/80x80?text=AWS',
+      name: 'Operating Systems and You: Becoming a Power User',
+      issuer: 'Google',
+      dateEarned: '2025-12-15',
+      badgeImage: 'images/operating system.jpeg',
     },
     {
       id: '3',
-      name: 'Google IT Support',
+      name: 'The Bits and Bytes of Computer Networking',
       issuer: 'Google',
-      dateEarned: '2024-11-20',
-      badgeImage: 'https://placehold.co/80x80?text=GCP',
+      dateEarned: '2025-12-13',
+      badgeImage: 'images/The Bits and Bytes of Computer Networking.jpeg',
     },
+  
     {
       id: '4',
-      name: 'Linux+',
-      issuer: 'CompTIA',
-      dateEarned: '2024-08-15',
-      badgeImage: 'https://placehold.co/80x80?text=Linux',
+      name: 'System Administration and IT Infrastructure Services',
+      issuer: 'Google',
+      dateEarned: '2026-01-15',
+      badgeImage: 'images/System Administration and IT Infrastructure Services.jpeg',
     },
   ],
   outsideTech:
     "When I'm not debugging code or configuring networks, I enjoy hiking, photography, and playing indie video games.",
   contact: {
-    email: 'rblenon18@gmail.com',
+    email: 'ernesdalope02@gmail.com',
     location: 'San Francisco, CA',
   },
 };

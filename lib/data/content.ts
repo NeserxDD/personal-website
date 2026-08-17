@@ -14,8 +14,35 @@ export const siteConfig: SiteConfig = {
 
   ],
   projects: [
-    {
+     {
       id: '1',
+      title: 'Adial - A day in a life (Ongoing)',
+      description: [
+        'Built a full-stack web app for managing tasks, events, lists, finances, notes, and journals through a centralized dashboard.',
+      
+      ],
+      techStack: ['Next.js', 'Typescript', 'Supabase'],
+      thumbnail: 'https://placehold.co/400x225?text=Adial',
+      links: {
+        github: 'https://github.com/NeserxDD/adial-project',
+        live: 'https://adial.vercel.app/',
+      },
+    },
+     {
+      id: '2',
+      title: 'Resume Builder',
+      description: [
+        'Built a resume platform that transforms a single profile into multiple tailored, professional resumes without requiring users to start from scratch.',
+        'Implemented multiple professional resume templates, live preview, authentication, secure per-user data isolation, and selectable-text PDF export.',
+      ],
+      techStack: ['Next.js', 'Tailwind CSS', 'Supabase'],
+      thumbnail: 'https://placehold.co/400x225?text=Resume+Builder',
+      links: {
+        github: 'https://github.com/NeserxDD/resume-builder',
+      },
+    },
+    {
+      id: '3',
       title: 'Temperature-Regulating-Smart-Coaster',
       description: [
         'Built an IoT-based smart coaster with Arduino and a mobile app for real-time temperature monitoring and control.',
@@ -28,7 +55,7 @@ export const siteConfig: SiteConfig = {
       },
     },
     {
-      id: '2',
+      id: '4',
       title: 'Brum App',
       description: [
         'Developed a mobile app to monitor 8S Good Housekeeping compliance in government offices and hospitals.',

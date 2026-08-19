@@ -15,25 +15,44 @@ export function Header() {
         </Link>
 
         {/* Desktop nav — full links always visible */}
-        <nav className="hidden md:flex items-center gap-6">
+        <nav className="hidden md:flex items-center gap-4 lg:gap-5">
           <Link
             href="#projects"
-            className="text-sm text-gray-500 hover:text-ink transition-colors font-mono uppercase tracking-wider"
+            className="text-xs text-gray-500 hover:text-ink transition-colors font-mono uppercase tracking-wider"
           >
             projects
           </Link>
           <Link
+            href="#skills"
+            className="text-xs text-gray-500 hover:text-ink transition-colors font-mono uppercase tracking-wider"
+          >
+            skills
+          </Link>
+          <Link
             href="#experience"
-            className="text-sm text-gray-500 hover:text-ink transition-colors font-mono uppercase tracking-wider"
+            className="text-xs text-gray-500 hover:text-ink transition-colors font-mono uppercase tracking-wider"
           >
             experience
           </Link>
           <Link
+            href="#education"
+            className="text-xs text-gray-500 hover:text-ink transition-colors font-mono uppercase tracking-wider"
+          >
+            education
+          </Link>
+          <Link
             href="#certifications"
-            className="text-sm text-gray-500 hover:text-ink transition-colors font-mono uppercase tracking-wider"
+            className="text-xs text-gray-500 hover:text-ink transition-colors font-mono uppercase tracking-wider"
           >
             certifications
           </Link>
+          <Link
+            href="#contact"
+            className="text-xs text-gray-500 hover:text-ink transition-colors font-mono uppercase tracking-wider"
+          >
+            contact
+          </Link>
+          <span className="hidden md:block h-5 w-px bg-gray-200 dark:bg-gray-700" />
           <ThemeToggle />
         </nav>
 
@@ -91,6 +110,13 @@ export function Header() {
               projects
             </Link>
             <Link
+              href="#skills"
+              className="text-sm text-gray-500 hover:text-ink transition-colors font-mono uppercase tracking-wider py-2"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              skills
+            </Link>
+            <Link
               href="#experience"
               className="text-sm text-gray-500 hover:text-ink transition-colors font-mono uppercase tracking-wider py-2"
               onClick={() => setIsMobileMenuOpen(false)}
@@ -98,11 +124,25 @@ export function Header() {
               experience
             </Link>
             <Link
+              href="#education"
+              className="text-sm text-gray-500 hover:text-ink transition-colors font-mono uppercase tracking-wider py-2"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              education
+            </Link>
+            <Link
               href="#certifications"
               className="text-sm text-gray-500 hover:text-ink transition-colors font-mono uppercase tracking-wider py-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               certifications
+            </Link>
+            <Link
+              href="#contact"
+              className="text-sm text-gray-500 hover:text-ink transition-colors font-mono uppercase tracking-wider py-2"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              contact
             </Link>
           </div>
         </div>

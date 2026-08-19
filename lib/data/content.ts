@@ -49,7 +49,7 @@ export const siteConfig: SiteConfig = {
         'Maintained beverage temperature accuracy within ±5°C, demonstrating reliability of the system.',
       ],
       techStack: ['Arduino', 'C++', 'Kotlin'],
-      thumbnail: 'https://placehold.co/400x225?text=Coaster',
+      thumbnail: 'images/smartcouster.png',
       links: {
         github: 'https://github.com/NeserxDD/Temperature-Regulating-Smart-Coaster',
       },

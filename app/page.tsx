@@ -10,17 +10,15 @@ import { OutsideTech } from './components/sections/outside-tech';
 import { Contact } from './components/sections/contact';
 import { AnimateOnScroll } from './components/ui/animate-on-scroll';
 
-const sectionDelays = ['', '100ms', '200ms', '300ms', '400ms', '500ms', '600ms'];
-
 export default function Home() {
   const sections = [
-    { Component: Projects, delay: '0ms' },
-    { Component: Skills, delay: '100ms' },
-    { Component: Experience, delay: '200ms' },
-    { Component: Education, delay: '300ms' },
-    { Component: Certifications, delay: '400ms' },
-    { Component: OutsideTech, delay: '500ms' },
-    { Component: Contact, delay: '600ms' },
+    { key: 'projects', Component: Projects, delay: '0ms' },
+    { key: 'skills', Component: Skills, delay: '100ms' },
+    { key: 'experience', Component: Experience, delay: '200ms' },
+    { key: 'education', Component: Education, delay: '300ms' },
+    { key: 'certifications', Component: Certifications, delay: '400ms' },
+    { key: 'outside-tech', Component: OutsideTech, delay: '500ms' },
+    { key: 'contact', Component: Contact, delay: '600ms' },
   ];
 
   return (
@@ -29,8 +27,8 @@ export default function Home() {
       <main className="min-h-screen">
         <Hero />
         <div className="mx-auto max-w-content-wide px-4 sm:px-6 py-section">
-          {sections.map(({ Component, delay }) => (
-            <AnimateOnScroll key={Component.name} delay={delay}>
+          {sections.map(({ key, Component, delay }) => (
+            <AnimateOnScroll key={key} delay={delay}>
               <Component />
             </AnimateOnScroll>
           ))}

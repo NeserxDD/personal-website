@@ -54,7 +54,7 @@ export function Hero() {
         {/* View Resume button */}
         <div className="flex justify-center">
           <a
-            href="resume/Resume_Ernes Glenn Dalope 2026(1).pdf"
+            href="resume/ERNES_GLENN_DALOPE_RESUME.pdf"
             className="inline-flex items-center gap-2 px-6 py-2.5 rounded-lg border border-gray-200 dark:border-gray-800 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
           >
             <span>View Resume</span>

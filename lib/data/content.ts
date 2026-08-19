@@ -6,8 +6,8 @@ export const siteConfig: SiteConfig = {
     role: 'Computer Science |- It Support |- Software & Networking',
     subtitle:
       'Building systems that work, networks that connect, code that scales.',
-    photoMain: '/images/hoveranime.jpg',
-    photoHover: '/images/hoverprofile.png',
+    photoMain: '/images/hoverprofile.png',
+    photoHover: '/images/hoveranime.jpg',
   },
   about: [
     "I’m Ernes, a Computer Science graduate with a strong interest in IT support, networking, and software. I enjoy solving technical problems, learning new technologies, and understanding how systems work. I’m continuously developing my skills and looking forward to opportunities where I can gain experience, contribute to a team, and grow in the IT field.",

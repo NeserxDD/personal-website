@@ -18,37 +18,37 @@ export function Header() {
         <nav className="hidden md:flex items-center gap-4 lg:gap-5">
           <Link
             href="#projects"
-            className="text-xs text-gray-500 hover:text-ink transition-colors font-mono uppercase tracking-wider"
+            className="text-xs text-gray-500 dark:text-gray-400 hover:text-ink transition-colors font-mono uppercase tracking-wider"
           >
             projects
           </Link>
           <Link
             href="#skills"
-            className="text-xs text-gray-500 hover:text-ink transition-colors font-mono uppercase tracking-wider"
+            className="text-xs text-gray-500 dark:text-gray-400 hover:text-ink transition-colors font-mono uppercase tracking-wider"
           >
             skills
           </Link>
           <Link
             href="#experience"
-            className="text-xs text-gray-500 hover:text-ink transition-colors font-mono uppercase tracking-wider"
+            className="text-xs text-gray-500 dark:text-gray-400 hover:text-ink transition-colors font-mono uppercase tracking-wider"
           >
             experience
           </Link>
           <Link
             href="#education"
-            className="text-xs text-gray-500 hover:text-ink transition-colors font-mono uppercase tracking-wider"
+            className="text-xs text-gray-500 dark:text-gray-400 hover:text-ink transition-colors font-mono uppercase tracking-wider"
           >
             education
           </Link>
           <Link
             href="#certifications"
-            className="text-xs text-gray-500 hover:text-ink transition-colors font-mono uppercase tracking-wider"
+            className="text-xs text-gray-500 dark:text-gray-400 hover:text-ink transition-colors font-mono uppercase tracking-wider"
           >
             certifications
           </Link>
           <Link
             href="#contact"
-            className="text-xs text-gray-500 hover:text-ink transition-colors font-mono uppercase tracking-wider"
+            className="text-xs text-gray-500 dark:text-gray-400 hover:text-ink transition-colors font-mono uppercase tracking-wider"
           >
             contact
           </Link>
@@ -104,42 +104,42 @@ export function Header() {
           <div className="max-w-content-wide mx-auto flex flex-col py-2 px-4 md:px-6 gap-1">
             <Link
               href="#projects"
-              className="text-sm text-gray-500 hover:text-ink transition-colors font-mono uppercase tracking-wider py-2"
+              className="text-sm text-gray-500 dark:text-gray-400 hover:text-ink transition-colors font-mono uppercase tracking-wider py-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               projects
             </Link>
             <Link
               href="#skills"
-              className="text-sm text-gray-500 hover:text-ink transition-colors font-mono uppercase tracking-wider py-2"
+              className="text-sm text-gray-500 dark:text-gray-400 hover:text-ink transition-colors font-mono uppercase tracking-wider py-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               skills
             </Link>
             <Link
               href="#experience"
-              className="text-sm text-gray-500 hover:text-ink transition-colors font-mono uppercase tracking-wider py-2"
+              className="text-sm text-gray-500 dark:text-gray-400 hover:text-ink transition-colors font-mono uppercase tracking-wider py-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               experience
             </Link>
             <Link
               href="#education"
-              className="text-sm text-gray-500 hover:text-ink transition-colors font-mono uppercase tracking-wider py-2"
+              className="text-sm text-gray-500 dark:text-gray-400 hover:text-ink transition-colors font-mono uppercase tracking-wider py-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               education
             </Link>
             <Link
               href="#certifications"
-              className="text-sm text-gray-500 hover:text-ink transition-colors font-mono uppercase tracking-wider py-2"
+              className="text-sm text-gray-500 dark:text-gray-400 hover:text-ink transition-colors font-mono uppercase tracking-wider py-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               certifications
             </Link>
             <Link
               href="#contact"
-              className="text-sm text-gray-500 hover:text-ink transition-colors font-mono uppercase tracking-wider py-2"
+              className="text-sm text-gray-500 dark:text-gray-400 hover:text-ink transition-colors font-mono uppercase tracking-wider py-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               contact

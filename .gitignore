@@ -31,3 +31,5 @@ Thumbs.db
 # SDD workspace (keep tracked, but ignore generated artifacts)
 *.log
 .vercel
+
+tsconfig.tsbuildinfo

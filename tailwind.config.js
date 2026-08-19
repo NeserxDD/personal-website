@@ -9,8 +9,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: 'hsl(0 0% 100%)',
-        ink: 'hsl(0 0% 4%)',
+        background: 'rgb(var(--color-background) / <alpha-value>)',
+        ink: 'rgb(var(--color-ink) / <alpha-value>)',
         gray: {
           50: '#fafafa', 100: '#f5f5f5', 200: '#e9e9e9',
           300: '#d4d4d4', 400: '#a3a3a3', 500: '#737373',
